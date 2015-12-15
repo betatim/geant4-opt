@@ -86,8 +86,10 @@ RUN mkdir -p ~/GEANT4/source && \
       cmake .. && \
       make && \
       make install && \
+      cp -r ~/GEANT4/source/geant4.10.02/environments/g4py/lib/Geant4/ /usr/local/lib/python2.7/dist-packages/ && \
+      cp -r ~/GEANT4/source/geant4.10.02/environments/g4py/lib/g4py/ /usr/local/lib/python2.7/dist-packages/ && \
     cd /root && rm -rf GEANT4
 
 WORKDIR /root/
 RUN echo "source /usr/local/bin/geant4.sh" > ~/.bashrc
-    
+
