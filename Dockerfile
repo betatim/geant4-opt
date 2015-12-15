@@ -20,8 +20,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get remove -yq \
         libpython3.4-stdlib \
         libpython3.4-minimal
 
-RUN df -h
-
 # Python binary and source dependencies
 RUN apt-get update -qq && \
     DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends \
